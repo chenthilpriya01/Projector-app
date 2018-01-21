@@ -1,82 +1,79 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>add movie</title>
-<meta name="descrption" content="my add movie">
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="./css/reset.css">
-<link rel="stylesheet" type="text/css" href="./css/movie.css">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300">
+    <meta charset="utf-8">
+    <title>Add Movie</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/movie.css" />
 </head>
-<body>
-  <header>
-    <img src="./images/projector-logo.png" class="logo">
-    <nav>
-      <ul class="fright">
-        <li>
-        <a href="#" class="s1"> HOME</a>
-        <a href="#" class="s1">ADD MOVIE</a>
-      </li>
+<body class="container">
+  <header class="">
+    <img class="fleft logo" src="images/projector-logo.png" alt="logo" />
+    <ul class="fright">
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="#">ADD MOVIE</a></li>
     </ul>
-    </nav>
   </header>
   <div class="clearfix"></div>
-  <form class="s2">
-  <h1>ADD THE NEW MOVIE</h1>
-  <form action="sample.html" method="post">
+  <form class="add_movie_form" id="add_movie_form">
+    <h2>Add a New Movie</h2>
     <ul>
-      <li><lable>Movie name</lable>
-        <input type="text" name="movie" required/>
-      </li>
-      <li><lable>Release year</lable>
-        <input type="text" name="year"/>
+      <li>
+          <label for="name">Movie Name</label>
+          <input type="text" name="name" required />
       </li>
       <li>
-        <div class="divide1">
-          <lable>Language</lable>
-        <select name="language">
-          <option></option>
-          <option id="e">english</option>
-          <option id="t">tamil</option>
-        </select>
-      </div><div class="divide">
-        <lable>Rating</lable>
-        <select name="rating">
-          <option></option>
-          <option id="a">5</option>
-          <option id="b">4</option>
-        </select>
-      </div>
+          <label for="releaseYear">Release Year</label>
+          <input type="text" name="releaseYear" required />
       </li>
       <li>
-        <lable>Thumbnail</lable>
-        <input type="url" name="u"/>
+        <div class="divide">
+          <label for="language">Language</label>
+          <select name="language">
+           <option value="english">English</option>
+           <option value="tamil">Tamil</option>
+           <option value="hindi">Hindi</option>
+           <option value="malayalam">Malayalam</option>
+         </select>
+       </div><div class="divide">
+          <label for="rating">Rating</label>
+          <select name="rating">
+           <option value="5">5</option>
+           <option value="4">4</option>
+           <option value="3">3</option>
+           <option value="2">2</option>
+           <option value="1">1</option>
+         </select>
+        </div>
       </li>
       <li>
-        <lable>Plot</lable>
-        <textarea rows="5" cols="20" name="ploot"/>
-      </textarea>
+          <label for="thumbnailUrl">Thumbnail URL</label>
+          <input type="url" name="thumbnailUrl" required />
       </li>
       <li>
-        <lable>Poster url</lable>
-        <input type="url" name="poster"/>
+          <label for="plot">Plot</label>
+          <textarea rows="6" name="plot"></textarea>
       </li>
       <li>
-        <lable>Cast</lable>
-        <textarea rows="5" cols="20" name="casst"/></textarea>
+          <label for="posterUrl">Poster URL</label>
+          <input type="url" name="posterUrl" />
       </li>
-      <button name="submit" value="save">save</button>
-    </form>
-      <footer>
-        <ul>
-          <li>
-            <a href="#"><img src="./images/facebook.png" class="ss"></a>
-            <a href="#"><img src="./images/twitter.png" class="ss"></a>
-            <a href="#"><img src="./images/instagram.png" class="ss"></a>
-            <img src="./images/projector-logo.png" class="logo1">
-          </li>
-        </ul>
-      </footer>
-
-    </body>
-    </html>
+      <li>
+          <label for="cast">Cast</label>
+          <textarea rows="6" name="cast"></textarea>
+      </li>
+    </ul>
+    <button id="submit">SAVE</button>
+  </form>
+  <div class="clearfix"></div>
+  <footer class="">
+    <img class="fright logo" width="200" src="images/projector-logo.png" alt="logo" />
+    <div class="btn-grp fleft ">
+      <button class="btn facebook"></button>
+      <button class="btn twitter"></button>
+      <button class="btn insta"></button>
+    </div>
+  </footer>
+</body>
+</html>
